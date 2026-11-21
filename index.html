@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+Here’s the complete updated code with the names replaced:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olamide Asabi | Student Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <div class="logo">Blush<span>Scholar</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="images/profile.jpeg" alt="Olamide Asabi" class="profile-img">
+      <h1>Hello, I'm <span class="highlight">Olamide Success Asabi</span></h1>
+      <p class="welcome">Welcome to my academic portfolio &amp; student hub</p>
+      <p class="bio">
+        I am a passionate student at MIVA Open University pursuing
+        excellence in technology. This space showcases my journey,
+        skills, projects, and helps me stay organised with my
+        academic goals.
+      </p>
+      <div class="hero-buttons">
+        <a href="about.html" class="btn btn-primary">About Me</a>
+        <a href="projects.html" class="btn btn-outline">View Projects</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== FEATURE CARDS ========== -->
+  <section class="features">
+    <div class="feature-card">
+      <h3>Academic Focus</h3>
+      <p>Dedicated to mastering web technologies and building real solutions.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Creative Projects</h3>
+      <p>Exploring design, code, and problem-solving through hands-on work.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Continuous Growth</h3>
+      <p>Always learning, improving, and taking on new challenges.</p>
+    </div>
+  </section>
+
+  <!-- ========== MULTIMEDIA (required) ========== -->
+  <section class="media-section">
+    <h2>A Short Introduction</h2>
+    <video controls width="100%" style="max-width:480px; border-radius:12px;">
+      <source src="images/intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">
+      (Optional: Add a short video of yourself. You can also use an
+      &lt;audio&gt; tag instead if you prefer.)
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Olamide Asabi | COS 106 Term Project | MIVA Open University</p>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
