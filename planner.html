@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Stay organised with Olamide Asabi's academic planner. Add academic tasks, track progress and manage your study activities."
+  >
+
+  <meta name="theme-color" content="#f8d7e5">
+
+  <title>Academic Planner | Olamide Asabi</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+
+  <!-- ========== NAVIGATION ========== -->
+
+  <nav class="navbar" aria-label="Main navigation">
+
+    <div class="logo">
+      Blush<span>Scholar</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+
+      <li>
+        <a href="about.html">About</a>
+      </li>
+
+      <li>
+        <a href="projects.html">Projects</a>
+      </li>
+
+      <li>
+        <a href="planner.html" class="active" aria-current="page">Planner</a>
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+
+    </ul>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+
+      <span aria-hidden="true">&#9776;</span>
+
+    </button>
+
+  </nav>
+
+
+  <!-- ========== ACADEMIC PLANNER ========== -->
+
+  <main class="page-content">
+
+    <h1 class="page-title">Academic Planner</h1>
+
+    <p class="page-intro">
+      Stay organised. Add tasks, mark them complete, or remove them.
+      Keep track of your academic responsibilities and make progress
+      towards your learning goals.
+    </p>
+
+
+    <!-- ========== TASK MANAGER ========== -->
+
+    <section class="planner-container" aria-label="Academic task manager">
+
+      <div class="add-task-form">
+
+        <label for="taskInput">
+          Enter a new academic task:
+        </label>
+
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="E.g. Complete COS 106 assignment..."
+          maxlength="100"
+          autocomplete="off"
+          aria-describedby="taskHint"
+        >
+
+        <p id="taskHint">
+          Maximum of 100 characters per task.
+        </p>
+
+        <button
+          id="addTaskBtn"
+          class="btn btn-primary"
+          type="button"
+        >
+          Add Task
+        </button>
+
+      </div>
+
+
+      <!-- TASK LIST -->
+
+      <ul
+        id="taskList"
+        class="task-list"
+        aria-label="Academic task list"
+        aria-live="polite"
+      >
+
+        <!-- Tasks will appear here dynamically via JavaScript -->
+
+      </ul>
+
+
+      <!-- EMPTY MESSAGE -->
+
+      <p
+        id="emptyMessage"
+        class="empty-message"
+        role="status"
+      >
+        No tasks yet. Add your first task above!
+
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+
+  <footer>
+
+    <p>
+      &copy; 2026 Olamide Asabi |
+      COS 106 Term Project |
+      MIVA Open University
+    </p>
+
+  </footer>
+
+
+  <!-- ========== EXTERNAL PLANNER JAVASCRIPT ========== -->
+
+  <script src="js/planner.js"></script>
+
+
+  <!-- ========== MOBILE NAVIGATION SCRIPT ========== -->
+
+  <script>
+
+    const hamburger = document.getElementById('hamburger');
+
+    const navLinks = document.getElementById('navLinks');
+
+
+    // Open and close the mobile navigation menu
+
+    function toggleMenu() {
+
+      const isOpen = navLinks.classList.toggle('show');
+
+      hamburger.setAttribute('aria-expanded', isOpen);
+
+      hamburger.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+      );
+
+    }
+
+
+    // Close the navigation menu
+
+    function closeMenu() {
+
+      navLinks.classList.remove('show');
+
+      hamburger.setAttribute('aria-expanded', 'false');
+
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+
+    }
+
+
+    // Toggle menu when hamburger button is clicked
+
+    hamburger.addEventListener('click', toggleMenu);
+
+
+    // Close menu after selecting a navigation link
+
+    const navigationLinks = navLinks.querySelectorAll('a');
+
+    navigationLinks.forEach(function(link) {
+
+      link.addEventListener('click', closeMenu);
+
+    });
+
+
+    // Close menu when Escape key is pressed
+
+    document.addEventListener('keydown', function(event) {
+
+      if (event.key === 'Escape') {
+
+        closeMenu();
+
+        hamburger.focus();
+
+      }
+
+    });
+
+
+    // Close menu when clicking outside navigation
+
+    document.addEventListener('click', function(event) {
+
+      if (
+        !hamburger.contains(event.target) &&
+        !navLinks.contains(event.target)
+      ) {
+
+        closeMenu();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>

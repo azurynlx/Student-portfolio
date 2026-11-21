@@ -1,91 +1,304 @@
-<!DOCTYPE html>
-Here’s the complete updated code with the names replaced:
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Welcome to Olamide Success Asabi's academic portfolio at MIVA Open University. Explore my academic journey, projects, skills and student planner.">
+
+  <meta name="theme-color" content="#f8d7e5">
+
   <title>Olamide Asabi | Student Portfolio</title>
+
   <link rel="stylesheet" href="css/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
+
 <body>
 
   <!-- ========== NAVIGATION ========== -->
-  <nav class="navbar">
-    <div class="logo">Blush<span>Scholar</span></div>
+
+  <nav class="navbar" aria-label="Main navigation">
+
+    <div class="logo">
+      Blush<span>Scholar</span>
+    </div>
+
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="planner.html">Planner</a></li>
-      <li><a href="contact.html">Contact</a></li>
+
+      <li>
+        <a href="index.html" class="active" aria-current="page">Home</a>
+      </li>
+
+      <li>
+        <a href="about.html">About</a>
+      </li>
+
+      <li>
+        <a href="projects.html">Projects</a>
+      </li>
+
+      <li>
+        <a href="planner.html">Planner</a>
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+
     </ul>
-    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+      <span aria-hidden="true">&#9776;</span>
+    </button>
+
   </nav>
 
+
   <!-- ========== HERO SECTION ========== -->
+
   <header class="hero">
+
     <div class="hero-content">
-      <img src="images/profile.jpeg" alt="Olamide Asabi" class="profile-img">
-      <h1>Hello, I'm <span class="highlight">Olamide Success Asabi</span></h1>
-      <p class="welcome">Welcome to my academic portfolio &amp; student hub</p>
+
+      <img
+        src="images/profile.jpeg"
+        alt="Profile photograph of Olamide Success Asabi"
+        class="profile-img"
+      >
+
+      <h1>
+        Hello, I'm
+        <span class="highlight">Olamide Success Asabi</span>
+      </h1>
+
+      <p class="welcome">
+        Welcome to my academic portfolio &amp; student hub.
+      </p>
+
       <p class="bio">
         I am a passionate student at MIVA Open University pursuing
         excellence in technology. This space showcases my journey,
         skills, projects, and helps me stay organised with my
         academic goals.
       </p>
+
       <div class="hero-buttons">
-        <a href="about.html" class="btn btn-primary">About Me</a>
-        <a href="projects.html" class="btn btn-outline">View Projects</a>
+
+        <a href="about.html" class="btn btn-primary">
+          About Me
+        </a>
+
+        <a href="projects.html" class="btn btn-outline">
+          View Projects
+        </a>
+
       </div>
+
     </div>
+
   </header>
 
+
   <!-- ========== FEATURE CARDS ========== -->
-  <section class="features">
+
+  <section class="features" aria-label="Academic highlights">
+
     <div class="feature-card">
+
       <h3>Academic Focus</h3>
-      <p>Dedicated to mastering web technologies and building real solutions.</p>
+
+      <p>
+        Dedicated to mastering web technologies and building real solutions.
+      </p>
+
     </div>
+
     <div class="feature-card">
+
       <h3>Creative Projects</h3>
-      <p>Exploring design, code, and problem-solving through hands-on work.</p>
+
+      <p>
+        Exploring design, code, and problem-solving through hands-on work.
+      </p>
+
     </div>
+
     <div class="feature-card">
+
       <h3>Continuous Growth</h3>
-      <p>Always learning, improving, and taking on new challenges.</p>
+
+      <p>
+        Always learning, improving, and taking on new challenges.
+      </p>
+
     </div>
+
   </section>
 
-  <!-- ========== MULTIMEDIA (required) ========== -->
+
+  <!-- ========== MULTIMEDIA SECTION ========== -->
+
   <section class="media-section">
+
     <h2>A Short Introduction</h2>
-    <video controls width="100%" style="max-width:480px; border-radius:12px;">
+
+    <video
+      controls
+      preload="metadata"
+      width="100%"
+      style="max-width:480px; border-radius:12px;"
+      aria-label="Introduction video of Olamide Success Asabi"
+    >
+
       <source src="images/intro.mp4" type="video/mp4">
+
       Your browser does not support the video tag.
+
     </video>
+
     <p style="margin-top:10px; font-size:0.9rem; opacity:0.8;">
-      (Optional: Add a short video of yourself. You can also use an
-      &lt;audio&gt; tag instead if you prefer.)
+
+      You can watch my introduction video to learn more about me
+      and my academic journey.
+
     </p>
+
   </section>
+
+
+  <!-- ========== CONTACT INFORMATION ========== -->
+
+  <section class="contact-info">
+
+    <h2>Get in Touch</h2>
+
+    <p>
+      Phone:
+      <a href="tel:09168361632">09168361632</a>
+    </p>
+
+    <p>
+      Visit my contact page to send me a message.
+    </p>
+
+    <a href="contact.html" class="btn btn-primary">
+      Contact Me
+    </a>
+
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
 
   <footer>
-    <p>&copy; 2025 Olamide Asabi | COS 106 Term Project | MIVA Open University</p>
+
+    <p>
+      &copy; 2026 Olamide Asabi |
+      COS 106 Term Project |
+      MIVA Open University
+    </p>
+
+    <p>
+      Phone:
+      <a href="tel:09168361632">09168361632</a>
+    </p>
+
   </footer>
 
+
+  <!-- ========== MOBILE NAVIGATION SCRIPT ========== -->
+
   <script>
-    // Simple mobile menu toggle
+
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+
+    // Open and close the mobile navigation menu
+
+    function toggleMenu() {
+
+      const isOpen = navLinks.classList.toggle('show');
+
+      hamburger.setAttribute('aria-expanded', isOpen);
+
+      hamburger.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+      );
+
+    }
+
+    // Close the navigation menu
+
+    function closeMenu() {
+
+      navLinks.classList.remove('show');
+
+      hamburger.setAttribute('aria-expanded', 'false');
+
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+
+    }
+
+    // Toggle menu when hamburger button is clicked
+
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when a navigation link is selected
+
+    const navigationLinks = navLinks.querySelectorAll('a');
+
+    navigationLinks.forEach(function(link) {
+
+      link.addEventListener('click', closeMenu);
+
     });
+
+    // Close menu when Escape key is pressed
+
+    document.addEventListener('keydown', function(event) {
+
+      if (event.key === 'Escape') {
+
+        closeMenu();
+
+        hamburger.focus();
+
+      }
+
+    });
+
+    // Close menu when clicking outside navigation
+
+    document.addEventListener('click', function(event) {
+
+      if (
+        !hamburger.contains(event.target) &&
+        !navLinks.contains(event.target)
+      ) {
+
+        closeMenu();
+
+      }
+
+    });
+
   </script>
 
 </body>

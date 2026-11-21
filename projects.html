@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Explore the academic and personal projects of Olamide Success Asabi, including a personal portfolio website, student task manager and responsive landing page."
+  >
+
+  <meta name="theme-color" content="#f8d7e5">
+
+  <title>Projects | Olamide Asabi</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+
+  <!-- ========== NAVIGATION ========== -->
+
+  <nav class="navbar" aria-label="Main navigation">
+
+    <div class="logo">
+      Blush<span>Scholar</span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+
+      <li>
+        <a href="about.html">About</a>
+      </li>
+
+      <li>
+        <a href="projects.html" class="active" aria-current="page">Projects</a>
+      </li>
+
+      <li>
+        <a href="planner.html">Planner</a>
+      </li>
+
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+
+    </ul>
+
+    <button
+      class="hamburger"
+      id="hamburger"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+
+      <span aria-hidden="true">&#9776;</span>
+
+    </button>
+
+  </nav>
+
+
+  <!-- ========== PROJECTS SECTION ========== -->
+
+  <main class="page-content">
+
+    <h1 class="page-title">My Projects</h1>
+
+    <p class="page-intro">
+      A selection of academic and personal projects that demonstrate
+      my growing skills, creativity, and passion for technology.
+    </p>
+
+
+    <!-- ========== PROJECT CARDS ========== -->
+
+    <section class="projects-grid" aria-label="My projects">
+
+
+      <!-- PROJECT 1: PERSONAL PORTFOLIO -->
+
+      <article class="project-card">
+
+        <div class="project-image" aria-hidden="true">
+
+          <strong>PORTFOLIO SITE</strong>
+
+        </div>
+
+        <h3>Personal Portfolio Website</h3>
+
+        <p>
+          A responsive multi-page portfolio built with HTML, CSS and
+          JavaScript as part of my academic project. It features an
+          interactive student planner, contact form and modern user
+          interface design.
+        </p>
+
+        <div class="project-links">
+
+          <a
+            href="index.html"
+            class="btn btn-small"
+            aria-label="View the personal portfolio website"
+          >
+            View Live
+          </a>
+
+          <a
+            href="https://github.com/azurynlx/student-portfolio"
+            class="btn btn-small btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View personal portfolio source code on GitHub (opens in a new tab)"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 2: STUDENT TASK MANAGER -->
+
+      <article class="project-card">
+
+        <div class="project-image" aria-hidden="true">
+
+          <strong>TASK MANAGER</strong>
+
+        </div>
+
+        <h3>Student Task Manager</h3>
+
+        <p>
+          An interactive web-based task management tool that allows
+          users to add, complete and delete academic tasks. Built with
+          vanilla JavaScript and local storage concepts to support
+          better organisation and productivity.
+        </p>
+
+        <div class="project-links">
+
+          <a
+            href="planner.html"
+            class="btn btn-small"
+            aria-label="View the student task manager"
+          >
+            View Live
+          </a>
+
+          <a
+            href="https://github.com/azurynlx/student-portfolio"
+            class="btn btn-small btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View task manager project repository on GitHub (opens in a new tab)"
+          >
+            Details
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 3: RESPONSIVE LANDING PAGE -->
+
+      <article class="project-card">
+
+        <div class="project-image" aria-hidden="true">
+
+          <strong>LANDING PAGE</strong>
+
+        </div>
+
+        <h3>Responsive Landing Page</h3>
+
+        <p>
+          A clean, mobile-first landing page concept for an
+          educational platform. It demonstrates the use of
+          Flexbox, CSS Grid, smooth animations and modern
+          visual hierarchy to create an engaging user experience.
+        </p>
+
+        <div class="project-links">
+
+          <a
+            href="https://azurynlx.github.io/student-portfolio/"
+            class="btn btn-small"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View responsive landing page demo (opens in a new tab)"
+          >
+            View Demo
+          </a>
+
+          <a
+            href="https://github.com/azurynlx/student-portfolio"
+            class="btn btn-small btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View landing page case study on GitHub (opens in a new tab)"
+          >
+            Case Study
+          </a>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+
+  <footer>
+
+    <p>
+      &copy; 2026 Olamide Asabi |
+      COS 106 Term Project |
+      MIVA Open University
+    </p>
+
+  </footer>
+
+
+  <!-- ========== MOBILE NAVIGATION SCRIPT ========== -->
+
+  <script>
+
+    const hamburger = document.getElementById('hamburger');
+
+    const navLinks = document.getElementById('navLinks');
+
+
+    // Open and close the mobile navigation menu
+
+    function toggleMenu() {
+
+      const isOpen = navLinks.classList.toggle('show');
+
+      hamburger.setAttribute('aria-expanded', isOpen);
+
+      hamburger.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+      );
+
+    }
+
+
+    // Close the navigation menu
+
+    function closeMenu() {
+
+      navLinks.classList.remove('show');
+
+      hamburger.setAttribute('aria-expanded', 'false');
+
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+
+    }
+
+
+    // Toggle menu when hamburger button is clicked
+
+    hamburger.addEventListener('click', toggleMenu);
+
+
+    // Close menu after selecting a navigation link
+
+    const navigationLinks = navLinks.querySelectorAll('a');
+
+    navigationLinks.forEach(function(link) {
+
+      link.addEventListener('click', closeMenu);
+
+    });
+
+
+    // Close menu when Escape key is pressed
+
+    document.addEventListener('keydown', function(event) {
+
+      if (event.key === 'Escape') {
+
+        closeMenu();
+
+        hamburger.focus();
+
+      }
+
+    });
+
+
+    // Close menu when clicking outside navigation
+
+    document.addEventListener('click', function(event) {
+
+      if (
+        !hamburger.contains(event.target) &&
+        !navLinks.contains(event.target)
+      ) {
+
+        closeMenu();
+
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>
